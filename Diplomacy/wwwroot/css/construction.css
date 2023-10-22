@@ -3,14 +3,14 @@
   box-sizing: border-box;
 }
 
-main {
+.WIP-main {
   position: relative;
   height: 50vh;
   z-index: -10;
   background: linear-gradient(to top, hsl(200, 5%, 11%), hsla(0, 100%, 100%, 0.75));
 }
 
-body {
+.WIP-body {
   font-size: 12px;
   font-family: "Josefin Sans", "Roboto", sans-serif;
   color: hsla(0, 100%, 100%, 0.75);

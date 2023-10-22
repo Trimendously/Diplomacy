@@ -24,7 +24,7 @@ $media450: 450px;
     box-sizing: border-box;
 }
 
-main {
+.WIP-main {
     position: relative;
     height: 50vh;
     z-index: -10;
@@ -32,7 +32,7 @@ main {
     background: linear-gradient(to top, $c-secondary, $c-main);
 }
 
-body {
+.WIP-body {
     font-size: 12px; // 1rem=12px
     font-family: 'Josefin Sans', 'Roboto', sans-serif;
     color: $c-main;
