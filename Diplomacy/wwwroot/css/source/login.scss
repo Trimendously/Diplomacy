@@ -1,0 +1,557 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700italic", "https://fonts.googleapis.com/css?family=Cabin:400";
+
+$diplomacy-light-blue: #00fffc;
+$diplomacy-med-blue: #00a4a2;
+$form-height: 380px;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #fff;
+    background-size: cover;
+    font-size: 10px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+/* =========================================
+Slogan
+========================================= */
+
+#logo {
+    animation: logo-entry 4s ease-in;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 40;
+}
+
+h1 {
+    animation: text-glow 2s ease-out infinite alternate;
+    font-family: 'Ubuntu', sans-serif;
+    color: $diplomacy-med-blue;
+    font-size: 48px;
+    font-size: 4.8rem;
+    font-weight: bold;
+    position: absolute;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+    top: 50px;
+
+    &:before {
+        animation: before-glow 2s ease-out infinite alternate;
+        border-left: 535px solid transparent;
+        border-bottom: 10px solid $diplomacy-med-blue;
+        content: ' ';
+        height: 0;
+        position: absolute;
+        right: -74px;
+        top: -10px;
+        width: 0;
+    }
+
+    &:after {
+        animation: after-glow 2s ease-out infinite alternate;
+        border-left: 100px solid transparent;
+        border-top: 16px solid $diplomacy-med-blue;
+        content: ' ';
+        height: 0;
+        position: absolute;
+        right: -85px;
+        top: 24px;
+        transform: rotate(-47deg);
+        width: 0;
+    }
+}
+
+/* =========================================
+Log in form
+========================================= */
+#fade-box {
+    animation: input-entry 3s ease-in;
+    z-index: 4;
+}
+
+.diplomacy-login {
+    form {
+        animation: form-entry 3s ease-in-out;
+        background: #111;
+        background: linear-gradient(#004746, #111);
+        border: 6px solid $diplomacy-med-blue;
+        box-shadow: 0 0 15px #00fffd;
+        border-radius: 5px;
+        display: inline-block;
+        height: 362px;
+        margin: 200px auto 0;
+        position: relative;
+        z-index: 4;
+        width: 30vw;
+        transition: 1s all;
+
+        &:hover {
+            border: 6px solid #00fffd;
+            box-shadow: 0 0 25px #00fffd;
+            transition: 1s all;
+        }
+    }
+
+    .custom-input {
+        background: #222;
+        background: linear-gradient(#333, #222);
+        border: 1px solid #444;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #000;
+        color: #888;
+        display: block;
+        font-family: 'Cabin', helvetica, arial, sans-serif;
+        font-size: 13px;
+        font-size: 1.3rem;
+        height: 40px;
+        margin: 20px auto 10px;
+        padding: 0 10px;
+        text-shadow: 0 -1px 0 #000;
+        width: 25vw;
+    }
+
+    .custom-input:focus {
+        animation: box-glow 1s ease-out infinite alternate;
+        background: #0B4252;
+        background: linear-gradient(#333933, #222922);
+        border-color: #00fffc;
+        box-shadow: 0 0 5px rgba(0, 255, 253, .2), inset 0 0 5px rgba(0, 255, 253, .1), 0 2px 0 #000;
+        color: #efe;
+        outline: none;
+    }
+
+    .custom-input:invalid {
+        border: 2px solid red;
+        box-shadow: 0 0 5px rgba(255, 0, 0, .2), inset 0 0 5px rgba(255, 0, 0, .1), 0 2px 0 #000;
+    }
+
+    .checkbox label {
+        color: #FFFFFF;
+    }
+
+    .login-button {
+        animation: input-entry 3s ease-in;
+        background: #222;
+        background: linear-gradient(#333, #222);
+        box-sizing: content-box;
+        border: 1px solid #444;
+        border-left-color: #000;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #000;
+        color: #fff;
+        display: block;
+        font-family: 'Cabin', helvetica, arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        height: 40px;
+        line-height: 40px;
+        margin: 20px auto;
+        padding: 0;
+        position: relative;
+        text-shadow: 0 -1px 0 #000;
+        width: 20vw;
+        transition: 1s all;
+    }
+
+    .login-button:hover,
+    .login-button:focus {
+        background: #0C6125;
+        background: linear-gradient(#393939, #292929);
+        color: $diplomacy-light-blue;
+        outline: none;
+        transition: 1s all;
+    }
+
+    .login-button:active {
+        background: #292929;
+        background: linear-gradient(#393939, #292929);
+        box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+        top: 1px;
+    }
+
+
+    a {
+        border: none;
+        background: none;
+        text-decoration: underline;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    .external-authentication p {
+        animation: text-glow 2s ease-out infinite alternate;
+        font-family: 'Ubuntu', sans-serif;
+        color: $diplomacy-med-blue;
+        font-size: 12px;
+        font-size: 2rem;
+        font-weight: bold;
+        position: relative;
+        top: 0;
+    }
+    /* =========================================
+    3rd-party Icons
+    ========================================= */
+    .social-button {
+        background-position: 25px 0px;
+        box-sizing: border-box;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: inline-block;
+        line-height: 50px;
+        text-align: left;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: middle;
+        border-radius: 3px;
+        margin: 10px auto;
+        outline: rgb(255, 255, 255) none 0px;
+        transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        width: 50px;
+        height: 50px;
+    }
+
+    #facebook-connect {
+        background: rgb(255, 255, 255,0) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+        border: 1px solid rgb(60, 90, 154);
+    }
+
+    #facebook-connect:hover {
+        border-color: rgb(60, 90, 154);
+        background: rgb(60, 90, 154) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+        -webkit-transition: all .8s ease-out;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease-out;
+    }
+
+    #facebook-connect span {
+        box-sizing: border-box;
+        color: rgb(60, 90, 154);
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0px none rgb(255, 255, 255);
+        outline: rgb(255, 255, 255) none 0px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #facebook-connect:hover span {
+        color: #FFF;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #google-connect {
+        background: rgb(255, 255, 255,0) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+        border: 1px solid rgb(220, 74, 61);
+    }
+
+    #google-connect:hover {
+        border-color: rgb(220, 74, 61);
+        background: rgb(220, 74, 61) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus-white.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+        -webkit-transition: all .8s ease-out;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease-out;
+    }
+
+    #google-connect span {
+        box-sizing: border-box;
+        color: rgb(220, 74, 61);
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0px none rgb(220, 74, 61);
+        outline: rgb(255, 255, 255) none 0px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #google-connect:hover span {
+        color: #FFF;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #twitter-connect {
+        background: rgb(255, 255, 255,0) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter.png') no-repeat scroll 5px 1px / 90% 90% padding-box border-box;
+        border: 1px solid rgb(85, 172, 238);
+    }
+
+    #twitter-connect:hover {
+        border-color: rgb(85, 172, 238);
+        background: rgb(85, 172, 238) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter-white.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+        -webkit-transition: all .8s ease-out;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease-out;
+    }
+
+    #twitter-connect span {
+        box-sizing: border-box;
+        color: rgb(85, 172, 238);
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0px none rgb(220, 74, 61);
+        outline: rgb(255, 255, 255) none 0px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #twitter-connect:hover span {
+        color: #FFF;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #linkedin-connect {
+        background: rgb(255, 255, 255,0) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/linkedin.svg?sanitize=true') no-repeat scroll 13px 0px / 28px 45px padding-box border-box;
+        border: 1px solid rgb(0, 119, 181);
+    }
+
+    #linkedin-connect:hover {
+        border-color: rgb(0, 119, 181);
+        background: rgb(0, 119, 181) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/linkedin-white.svg?sanitize=true') no-repeat scroll 13px 0px / 28px 45px padding-box border-box;
+        -webkit-transition: all .8s ease-out;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease-out;
+    }
+
+    #linkedin-connect span {
+        box-sizing: border-box;
+        color: rgb(0, 119, 181);
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0px none rgb(0, 119, 181);
+        outline: rgb(255, 255, 255) none 0px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    #linkedin-connect:hover span {
+        color: #FFF;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+}
+
+/* =========================================
+Circle Background (WIP)
+========================================= */
+
+#circle1 {
+    animation: circle1 4s linear infinite, circle-entry 6s ease-in-out;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid $diplomacy-med-blue;
+    box-shadow: 0 0 0 2px black, 0 0 0 6px $diplomacy-light-blue;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -250px;
+    overflow: hidden;
+    opacity: 0.4;
+    z-index: -3;
+}
+
+#inner-cirlce1 {
+    background: #000;
+    border-radius: 50%;
+    border: 36px solid $diplomacy-light-blue;
+    height: 460px;
+    width: 460px;
+    margin: 10px;
+
+
+    &:before {
+        content: ' ';
+        width: 240px;
+        height: 480px;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:after {
+        content: ' ';
+        width: 480px;
+        height: 240px;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* =========================================
+Animation Keyframes
+========================================= */
+
+@keyframes logo-entry {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+@keyframes circle-entry {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes input-entry {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes form-entry {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+    20% {
+        height: 0;
+        border: 1px solid $diplomacy-med-blue;
+        width: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+
+    40% {
+        width: 0;
+        height: 362px;
+        border: 6px solid $diplomacy-med-blue;
+        opacity: 1;
+        padding: 0;
+    }
+
+    100% {
+        height: 362px;
+        width: 30vw;
+    }
+}
+
+
+
+@keyframes box-glow {
+    0% {
+        border-color: #00b8b6;
+        box-shadow: 0 0 5px rgba(0, 255, 253, .2), inset 0 0 5px rgba(0, 255, 253, .1), 0 2px 0 #000;
+    }
+
+    100% {
+        border-color: $diplomacy-light-blue;
+        box-shadow: 0 0 20px rgba(0, 255, 253, .6), inset 0 0 10px rgba(0, 255, 253, .4), 0 2px 0 #000;
+    }
+}
+
+@keyframes text-glow {
+    0% {
+        color: $diplomacy-med-blue;
+        text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+    }
+
+    100% {
+        color: $diplomacy-light-blue;
+        text-shadow: 0 0 20px rgba(0, 255, 253, .6), 0 0 10px rgba(0, 255, 253, .4), 0 2px 0 #000;
+    }
+}
+
+@keyframes before-glow {
+    0% {
+        border-bottom: 10px solid $diplomacy-med-blue;
+    }
+
+    100% {
+        border-bottom: 10px solid $diplomacy-light-blue;
+    }
+}
+
+@keyframes after-glow {
+    0% {
+        border-top: 16px solid $diplomacy-med-blue;
+    }
+
+    100% {
+        border-top: 16px solid $diplomacy-light-blue;
+    }
+}

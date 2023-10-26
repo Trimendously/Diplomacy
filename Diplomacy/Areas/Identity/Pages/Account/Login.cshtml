@@ -1,0 +1,55 @@
+﻿@page
+@model LoginModel
+
+<head>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+
+<div id="logo">
+    <h1><i>Continue The Battle</i></h1>
+</div>
+
+<section class="diplomacy-login">
+    <form id="account" method="post">
+        <div id="fade-box">
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="custom-input" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" class="custom-input" autocomplete="current-password" aria-required="true" placeholder="Password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="checkbox mb-3">
+                <label asp-for="Input.RememberMe" class="form-label">
+                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                    Remember Me
+                </label>
+            </div>
+            <div>
+                <button id="login-submit" type="submit" class="login-button">Log in</button>
+            </div>
+            
+            <div>
+                <p>
+                    <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                </p>
+                <p>
+                    <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                </p>
+            </div>
+            <a href="#" class="social-button" id="facebook-connect"> </a>
+            <a href="#" class="social-button" id="google-connect"> </a>
+            <a href="#" class="social-button" id="twitter-connect"> </a>
+            <a href="#" class="social-button" id="linkedin-connect"> </a>
+        </div>
+    </form>
+</section>
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
