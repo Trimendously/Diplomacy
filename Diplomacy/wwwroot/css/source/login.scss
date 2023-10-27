@@ -2,22 +2,24 @@
 
 $diplomacy-light-blue: #00fffc;
 $diplomacy-med-blue: #00a4a2;
-$form-height: 380px;
+$form-height: 420px;
 
 * {
     box-sizing: border-box;
 }
 
+
+
 html {
     background: #fff;
     background-size: cover;
-    font-size: 10px;
-    height: 100%;
     overflow: hidden;
     position: absolute;
     text-align: center;
     width: 100%;
+    font-size: 12px;
 }
+
 
 /* =========================================
 Slogan
@@ -28,15 +30,16 @@ Slogan
     width: 500px;
     margin: 0 auto;
     position: relative;
+    text-align: center;
     z-index: 40;
+    padding-bottom: 2em;
 }
 
 h1 {
     animation: text-glow 2s ease-out infinite alternate;
     font-family: 'Ubuntu', sans-serif;
     color: $diplomacy-med-blue;
-    font-size: 48px;
-    font-size: 4.8rem;
+    font-size: 2.4rem;
     font-weight: bold;
     position: absolute;
     text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
@@ -82,19 +85,20 @@ Log in form
         background: #111;
         background: linear-gradient(#004746, #111);
         border: 6px solid $diplomacy-med-blue;
-        box-shadow: 0 0 15px #00fffd;
+        box-shadow: 0 0 15px $diplomacy-light-blue;
         border-radius: 5px;
         display: inline-block;
-        height: 362px;
+        height: $form-height;
         margin: 200px auto 0;
         position: relative;
         z-index: 4;
         width: 30vw;
         transition: 1s all;
+        text-align: center;
 
         &:hover {
-            border: 6px solid #00fffd;
-            box-shadow: 0 0 25px #00fffd;
+            border: 6px solid $diplomacy-light-blue;
+            box-shadow: 0 0 25px $diplomacy-light-blue;
             transition: 1s all;
         }
     }
@@ -121,7 +125,7 @@ Log in form
         animation: box-glow 1s ease-out infinite alternate;
         background: #0B4252;
         background: linear-gradient(#333933, #222922);
-        border-color: #00fffc;
+        border-color: $diplomacy-light-blue;
         box-shadow: 0 0 5px rgba(0, 255, 253, .2), inset 0 0 5px rgba(0, 255, 253, .1), 0 2px 0 #000;
         color: #efe;
         outline: none;
@@ -498,14 +502,14 @@ Animation Keyframes
 
     40% {
         width: 0;
-        height: 362px;
+        height: $form-height;
         border: 6px solid $diplomacy-med-blue;
         opacity: 1;
         padding: 0;
     }
 
     100% {
-        height: 362px;
+        height: $form-height;
         width: 30vw;
     }
 }
@@ -553,5 +557,17 @@ Animation Keyframes
 
     100% {
         border-top: 16px solid $diplomacy-light-blue;
+    }
+}
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; // Change the font size in the media query
+    }
+
+
+    h1 {
+        font-size: 4.5rem; // Use the base title font size
     }
 }

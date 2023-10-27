@@ -7,12 +7,11 @@
 html {
   background: #fff;
   background-size: cover;
-  font-size: 10px;
-  height: 100%;
   overflow: hidden;
   position: absolute;
   text-align: center;
   width: 100%;
+  font-size: 12px;
 }
 
 /* =========================================
@@ -23,15 +22,16 @@ Slogan
   width: 500px;
   margin: 0 auto;
   position: relative;
+  text-align: center;
   z-index: 40;
+  padding-bottom: 2em;
 }
 
 h1 {
   animation: text-glow 2s ease-out infinite alternate;
   font-family: "Ubuntu", sans-serif;
   color: #00a4a2;
-  font-size: 48px;
-  font-size: 4.8rem;
+  font-size: 2.4rem;
   font-weight: bold;
   position: absolute;
   text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
@@ -79,19 +79,20 @@ Log in form
   background: #111;
   background: linear-gradient(#004746, #111);
   border: 6px solid #00a4a2;
-  box-shadow: 0 0 15px #00fffd;
+  box-shadow: 0 0 15px #00fffc;
   border-radius: 5px;
   display: inline-block;
-  height: 362px;
+  height: 420px;
   margin: 200px auto 0;
   position: relative;
   z-index: 4;
   width: 30vw;
   transition: 1s all;
+  text-align: center;
 }
 .diplomacy-login form:hover {
-  border: 6px solid #00fffd;
-  box-shadow: 0 0 25px #00fffd;
+  border: 6px solid #00fffc;
+  box-shadow: 0 0 25px #00fffc;
   transition: 1s all;
 }
 .diplomacy-login .custom-input {
@@ -444,13 +445,13 @@ Animation Keyframes
   }
   40% {
     width: 0;
-    height: 362px;
+    height: 420px;
     border: 6px solid #00a4a2;
     opacity: 1;
     padding: 0;
   }
   100% {
-    height: 362px;
+    height: 420px;
     width: 30vw;
   }
 }
@@ -488,6 +489,14 @@ Animation Keyframes
   }
   100% {
     border-top: 16px solid #00fffc;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 4.5rem;
   }
 }
 
